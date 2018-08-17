@@ -2,6 +2,7 @@
 A command line tool to justify a text at a specified width.
 
 ## Usage
+```
 > justify-text.py lorem-ipsum.txt 60
 ------------------------------------------------------------
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -13,7 +14,7 @@ esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint
 occaecat  cupidatat  non proident, sunt in culpa qui officia
 deserunt mollit anim id est laborum.
 ------------------------------------------------------------
-
+```
 ## Reference: class definitions
 
 ### JustifyText()
