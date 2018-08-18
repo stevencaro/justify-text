@@ -27,8 +27,8 @@ deserunt mollit anim id est laborum.
   <dd>Empties the buffer and sets the width to zero.</dd>
   <dt>add</dt>
   <dd>Adds a word or string of words to the buffer. Returns:</dd>
-  <dd>*None if the buffer is full and the word could not be added.</dd>
-  <dd>*The new width of the buffer if the word was added successfully.</dd>
+  <dd> * None if the buffer is full and the word could not be added.</dd>
+  <dd> * The new width of the buffer if the word was added successfully.</dd>
   <dt>strip</dt>
   <dd>Removes leading and trailing whitespace from the buffer.</dd>
   <dt>justify</dt>
@@ -52,3 +52,33 @@ deserunt mollit anim id est laborum.
   <dd>Given a new width, rejustified the text to that width. Useful interactively.</dd>
 </dl>
 
+### Interactive Ipython session
+```
+In [1]: with open('samharris.txt') as f:
+   ...:     text = f.read()
+   ...:
+
+In [2]: p (text)
+But the moment we admit that information processing is the source of intelligence;
+that some appropriate computational system is what the basis of intelligence is. . .
+and we admit that we will improve these systems continuously; and we admit that
+the horizon of cognition very likely far exceeds what we currently know, then
+we have to admit that we're in the process of building some sort of god.  Now
+would be a good time to make sure its a god we can live with.
+
+
+In [3]: run -n justify-text.py
+
+In [4]: justify = JustifyText(text, 70)
+
+In [5]: justify.show()
+----------------------------------------------------------------------
+But  the  moment we admit that information processing is the source of
+intelligence;  that  some appropriate computational system is what the
+basis  of intelligence is. . . and we admit that we will improve these
+systems  continuously; and we admit that the horizon of cognition very
+likely  far exceeds what we currently know, then we have to admit that
+we're in the process of building some sort of god. Now would be a good
+time to make sure its a god we can live with.
+----------------------------------------------------------------------
+```
